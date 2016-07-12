@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+
+        <!-- Site Title -->
+        <title>mntime - Manage Your Time</title>
+
+        <!-- Site Meta Info -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Effacy is a bootstrap3 based creative one page HTML5 Template.">
+        <meta name="keywords" content="creative, html5, portfolio, parallax, personal, responsive">
+        <meta name="author" content="themebite.com">
+
+
+        <!-- Essential CSS Files -->
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/animate.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/simplelightbox.min.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/owl.carousel.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/owl.theme.css">
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/style.css">
+        
+        <!-- Color Styles -->
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/colors/color-blue.css">
+
+        
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="<?php echo BASE_DIR?>Public/css/responsive.css">
+
+        <!-- Google Web Fonts =:= Raleway , Montserrat and Roboto -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400' rel='stylesheet' type='text/css'>
+
+        <!-- Essential JS Files -->
+        <script src="<?php echo BASE_DIR?>Public/js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="<?php echo BASE_DIR?>Public/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+
+    </head>
+    <style>
+        
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: #029f5b;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+    </style>
+    <body ng-app="">
+    <!-- Heaser Area Start -->
+    <header class="header-area">
+        <!-- Navigation start -->
+        <nav class="navbar navbar-custom tb-nav" role="navigation">
+            <div class="container">        
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tb-nav-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="#"><h2> MNTIME <i class="fa fa-clock-o" aria-hidden="true"></i></h2></a>
+              </div>
+          
+              <div class="collapse navbar-collapse" id="tb-nav-collapse">
+          
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a class="page-scroll" href="#top">Home</a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#signin">Sign In</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact Us</a></li>
+                    
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End of Navigation -->
+    <!-- End Of Header Area -->
+
+
+    <!-- hero-section -->
+    <section class="hero-section hero-particle-bg" id="top" data-stellar-background-ratio="0.1">
+        <div id="particles-js"></div>
+        <div class="slider-caption">
+            <div class="container">
+                <div class="row">
+                    <h1>welcome to <span>MNTIME</span></h1>
+                    <h5>Control Your Time Now!!!</h5>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Of Hero Section -->
+
+
+    <!-- About Us Section -->
+        
+    <section class="about-us" id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12 no-padding">
+                    <!-- About Us Left -->
+                    <div class="about-us-left">
+                        <h2 class="section-title-left">About our Website</h2>
+                        <p> Everyday, You alway lose your time, and you can't control it!. This website will help you to do it. This help you create Task to do list of day, help you create event, and base on it you can draw chart to compare your planned time and actual time!. This work will help you can control your time </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 no-padding">
+                    <!-- About Us Right -->
+                    <div class="about-us-right">
+                        <!-- Our Features -->
+                        <div class="media">
+                            <div class="media-left dotted">
+                               <i class="fa fa-tasks" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Create Task</h3>
+                                <p>Create your task everyday. You can base on it to control your task and know your work time. </p>
+                            </div>
+                        </div>
+                        <!-- Our Features -->
+                        <div class="media">
+                            <div class="media-left dotted">
+                                <i class="fa fa-pencil-square-o"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Create Event</h3>
+                                <p>You can create event with many time. And You can view how many time you waste for it</p>
+                            </div>
+                        </div>
+                        <!-- Our Features -->
+                        <div class="media">
+                            <div class="media-left">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Create Chart</h3>
+                                <p>You can draw chart to compare planned time and actual time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Of About Us Section -->
+
+        
+    <!-- Our Services -->
+
+    <section class="our-services-section section-padding" id="signin">
+        <div class="container">
+            <h2 class="section-title text-center">LogIn Into MNTIME.TODAY</h2>
+            <p class="sub-title text-center">Wellcome To MNTIME.TODAY. If You dont have account please <a class="page-scroll"  id="register-form-link2" href="#"> Register</a> here </p>
+              <?php if(isset ( $_SESSION['errregis'])) echo '<p class="sub-title text-center"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:red; font-weight: bolder;"> Password Confirm Wrong !!!</i></p>';
+                    elseif(isset($_SESSION['resuc'])) echo'<p class="sub-title text-center"><i class="fa fa-check" aria-hidden="true" style="color:green;">Register Successfull!! Plz Login into website.</i></p>';
+                    elseif(isset($_SESSION['fail'])) echo '<p class="sub-title text-center">'.($_SESSION['fail'])."</p>";?>
+            <div class="row our-services"
+
+               <div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="<?=BASE_DIR?>index/login" method="post" role="form" style="display: block;">
+									<div class="form-group">
+                                                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Username" value="" required>
+									</div>
+									<div class="form-group">
+										<input type="password" name="pass" id="pass" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="<?=BASE_URL?>index/register" method="post" role="form" style="display: none;">
+                                                                  
+									<div class="form-group">
+                                                                            <input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Username" value="" required>
+									</div>
+                                                                        <div class="form-group">
+                                                                            <input type="email" name="email" id="email" tabindex="2" class="form-control" placeholder="Email"  ng-model="email" required> 
+        
+                                                                        </div>
+									<div class="form-group">
+                                                                            <input type="password" name="pass1" id="pass1" tabindex="2" class="form-control" placeholder="Password"  ng-model="pass1" required> 
+									</div>
+                                                                    
+									<div class="form-group">
+                                                                            <input type="password" name="pass2" id="pass2" tabindex="2" class="form-control" placeholder="Confirm Password" ng-model="pass2" required>
+									</div>
+                                                                    <div ng-if="pass1&&pass2"> <div ng-if="pass1!=pass2"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color:red; font-weight: bolder;"> Password Confirm Wrong !!!</i></div> </div>
+                                                                                    <script>
+                                                                                    function myFunction() {
+                                                                                        var pass1 = document.getElementById("pass1").value;
+                                                                                        var pass2 = document.getElementById("pass2").value;
+                                                                                        if (pass1 != pass2) {
+                                                                                            alert("Passwords Do not match");
+                                                                                            document.getElementById("pass1").style.borderColor = "#E34234";
+                                                                                            document.getElementById("pass2").style.borderColor = "#E34234";
+                                                                                        }
+                                                                                        else {
+                                                                                          
+                                                                                            document.getElementById("register-form").submit();
+                                                                                        }
+                                                                                    }
+                                                                                </script>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="submit" id="submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+             
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact-us-section section-padding" id="contact">
+        <div class="container">
+            <!-- Contact Us Section Title -->
+            <h2 class="section-title contact-title text-center">Contact Us</h2>
+            <p class="sub-title contact-subtitle text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, magna aliqua.Ut enim <br> consectetur adipisicing  ad minim veniam</p>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <div class="contact-form-section mt-50">
+                        <form method="POST" action="" id="contactForm" name="contact-form" role="form">
+                            <div class="row">
+                                <div class="col-sm-5 col-md-4">
+                                    <!-- Name Field -->
+                                    <div class="form-group contact-form-icon">
+                                      <label class="sr-only">Name</label>
+                                      <i class="fa fa-user"></i>
+                                      <input type="text" placeholder="Name" id="name" class="form-control" name="name" required>
+                                    </div>
+                                    <!-- Email Field -->
+                                    <div class="form-group contact-form-icon">
+                                      <label for="email" class="sr-only">Email</label>
+                                      <i class="fa fa-envelope"></i>
+                                      <input type="email" placeholder="Email" id="email" class="form-control" name="email" required>
+                                    </div>
+                                    <!-- Subject Field -->
+                                    <div class="form-group contact-form-icon">
+                                      <label for="subject" class="sr-only">Subject</label>
+                                      <i class="fa fa-pencil"></i>
+                                      <input type="text" placeholder="Subject" id="subject" class="form-control" name="subject" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7 col-md-8">
+                                    <div class="form-group contact-form-icon">
+                                      <label for="message" class="sr-only">Message</label>
+                                      <i class="fa fa-keyboard-o"></i>
+                                      <textarea placeholder="Message" rows="7" id="message" class="form-control" name="message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5 col-md-4 text-center contact-button-padding">
+                                    <button class="btn-primary btn-contact btn-block" name="submit" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- End Of Google Map Section -->
+
+    <!-- Footer Section -->
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row mt-30 mb-30">
+                <div class="col-md-12 text-center">
+                    <!-- Footer Copy Right Text -->
+                    <div class="copyright-info">
+                        <a><span></span> K19T1 <span><i class="fa fa-heart"></i></span> TEAM3 <span>SEP</span></a>
+                    </div>
+
+                    <!-- Footer Social Icons -->
+                    <div class="social-icons mt-30">
+                        <a href="https://www.facebook.com/profile.php?id=100009624248958"><i class="fa fa-facebook"></i></a>
+                        <a href="https://plus.google.com/u/0/"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- End Of Footer Section -->
+
+    <script>
+        $(function() {
+
+    $('#login-form-link').click(function(e) {
+		$("#login-form").delay(100).fadeIn(100);
+ 		$("#register-form").fadeOut(100);
+		$('#register-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#register-form-link').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+        $('#register-form-link2').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
+});
+
+        </script>
+    <!-- JS Files -->
+    <!-- Bootstrap JS -->
+    <script src="<?php echo BASE_DIR?>Public/js/bootstrap.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="<?php echo BASE_DIR?>Public/js/jquery.easing.min.js"></script>
+    <!-- PreLoader -->
+    <script src="<?php echo BASE_DIR?>Public/js/queryloader2.min.js"></script>
+    <!-- Particle JS -->
+    <script src="<?php echo BASE_DIR?>Public/js/particles.min.js"></script>
+    <script src="<?php echo BASE_DIR?>Public/js/particles-config.js"></script>
+    <!-- Background Prallax -->
+    <script src="<?php echo BASE_DIR?>Public/js/jquery.stellar.min.js"></script>
+    <!-- WOW JS Animation -->
+    <script src="<?php echo BASE_DIR?>Public/js/wow.min.js"></script>
+    <!-- Simple Lightbox -->
+    <script src="<?php echo BASE_DIR?>Public/js/simple-lightbox.min.js"></script>
+    <!-- Sticky -->
+    <script src="<?php echo BASE_DIR?>Public/js/jquery.sticky.js"></script>
+    <!-- OWL-Carousel -->
+    <script src="<?php echo BASE_DIR?>Public/js/owl.carousel.min.js"></script>
+    <!-- jQuery inview -->
+    <script src="<?php echo BASE_DIR?>Public/js/jquery.inview.js"></script>
+    <!-- Shuffle jQuery -->
+    <script src="<?php echo BASE_DIR?>Public/js/jquery.shuffle.min.js"></script>
+    <!-- jQuery CountTo -->
+    <script src="<?php echo BASE_DIR?>Public/js/jquery.counTo.js"></script>
+    <!-- Goole map API -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- gmap.js plugin -->
+    <script src="<?php echo BASE_DIR?>Public/js/gmap.js"></script>
+    <!-- Main JS -->
+    <script src="<?php echo BASE_DIR?>Public/js/main.js"></script>
+
+    </body>
+</html>
